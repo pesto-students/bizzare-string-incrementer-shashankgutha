@@ -6,8 +6,8 @@ function bizarreStringIncrementer(inputChar){
   for (var i = inputChar.length; i > 0; i--) {
     var tempc=inputChar.charAt(i-1);
     if(!isNaN(tempc)){
-        inputNumber=inputChar.charAt(i-1)+inputNumber;
-        if(inputChar.charAt(i-1) === "0"){
+        inputNumber=tempc+inputNumber;
+        if(tempc === "0"){
           zeroCount++;   
         }
     }else{
