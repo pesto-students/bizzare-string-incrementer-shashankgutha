@@ -2,7 +2,7 @@ function bizarreStringIncrementer(inputChar){
   var inputNumber="";
   var outputChar =0;
   var zeroCount=0;
-  var charStrIdx=0;
+  var endingStrIdx=0;
   for (var i = inputChar.length; i > 0; i--) {
     var tempc=inputChar.charAt(i-1);
     if(!isNaN(tempc)){
@@ -11,7 +11,7 @@ function bizarreStringIncrementer(inputChar){
           zeroCount++;   
         }
     }else{
-      charStrIdx=i;
+      endingStrIdx=i;
       break;
     }
 }
@@ -24,7 +24,7 @@ if(inputNumber!="" && !isNaN(inputNumber)){
         outputChar="0"+outputChar;
     }
   }
-  return inputChar.substring(0, charStrIdx)+outputChar;
+  return inputChar.substring(0, endingStrIdx)+outputChar;
 }else{
   return inputChar+"1";
 }
